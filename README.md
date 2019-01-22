@@ -13,3 +13,6 @@ positional arguments:
 optional arguments:
   -h, --help   show this help message and exit
 ```
+
+## What it this good for?
+Now you can skim over the contents of an .evtx-File from within Linux using for example https://lnav.org/.
