@@ -97,10 +97,6 @@ def _get_enhanced_information(event):
 def get_log_from_xml(xml_string):
     ''' Get together all the information about the events and return 
     the full string. '''
-    # tree = ET.fromstring(xml_string)
-    # tree = ET.parse('out')
-    # root = tree.getroot()
-    
     root = ET.fromstring(xml_string)
     
     ret = ''
@@ -120,7 +116,12 @@ def main():
     parser.add_argument("output_file")
     args = parser.parse_args()
     
+    # Get the XML-String via python-evtx
+    print('[+] Starting parsing of evtx-file. This can take a while.')
     xml_string = get_xml_from_evtx(args.evtx_file)
+    
+    # Convert and write to output file
+    print('[+] Convert to log-format and write file..')
     out = open(args.output_file, 'w')
     out.write(get_log_from_xml(xml_string))
     out.close()
