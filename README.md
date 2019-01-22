@@ -1,5 +1,5 @@
 # evtxtolog
-Parses evtx-files to simple log-files readable by most common tools. This is accomplished using the python-evtx tool from https://github.com/williballenthin/python-evtx.
+Parses evtx-files to simple log-files readable by most common tools. This is accomplished using the python-evtx tool from https://github.com/williballenthin/python-evtx, the Event-ID-List based on https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx and some parsing.
 
 ## Usage
 ```
